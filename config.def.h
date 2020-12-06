@@ -35,23 +35,21 @@ static const Rule rules[] = {
 	/* class      instance    title       tags mask     isfloating   monitor */
 	//                               1 << 3 means 1000 which means tag = 4
 	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
-	{ "Firefox",  NULL,       NULL,       1 << 8,       0,           -1 },
-	{ "Chromium",  NULL,       NULL,       1 << 8,       0,           -1 },
 	{ "TelegramDesktop",  NULL,NULL,       1 << 1,       0,           -1 },
 	{ "discord",  NULL,       NULL,       1 << 1,       0,           -1 },
 	{ "whatsapp-nativefier-d52542",NULL,NULL,1 << 1,    0,           -1 },
 };
 
 /* layout(s) */
-static const float mfact = 0.65; // factor of master area size [0.05..0.95] 
+static const float mfact = 0.5; // factor of master area size [0.05..0.95] 
 static const int nmaster = 1;    /* number of clients in master area */
 static const int resizehints = 1;// 1 = respect size hints in tiled resizals
 
 static const Layout layouts[] = {
 	/* symbol     arrange function */
-	{ "TILED",      tile },  /* first entry is default */
-	{ "FLOAT",      NULL },  /* no layout function means floating behavior */
-	{ "MONO",      monocle },
+	{ "T",      tile },  /* first entry is default */
+	{ "F",      NULL },  /* no layout function means floating behavior */
+	{ "M",      monocle },
 };
 
 /* key definitions */
@@ -80,9 +78,9 @@ static Key keys[] = {
 	{ MODKEY,                       XK_d,      incnmaster,     {.i = -1 } },
 	{ MODKEY,                       XK_h,      setmfact,       {.f = -0.05} },
 	{ MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },
-	{ MODKEY,                       XK_Return, zoom,           {0} },
+	{ MODKEY|ControlMask,           XK_Return, zoom,           {0} },
 	{ MODKEY,                       XK_Tab,    view,           {0} },
-	{ MODKEY|ShiftMask,             XK_c,      killclient,     {0} },
+	{ ControlMask|ShiftMask,        XK_q,      killclient,     {0} },
 	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
 	{ MODKEY,                       XK_f,      setlayout,      {.v = &layouts[1]} },
 	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[2]} },
