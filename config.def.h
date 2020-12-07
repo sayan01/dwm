@@ -41,10 +41,10 @@ static const Rule rules[] = {
 	 */
 	//                               1 << 3 means 1000 which means tag = 4
 	/* class                 instance title  tags   isfloat isterm noswallow monitor*/
-	{ "Gimp",                  NULL,  NULL,    0,     1,      0      0       -1  },
-	{ "TelegramDesktop",       NULL,  NULL, 1 << 1,   0,      0      0       -1 },
-	{ "discord",               NULL,  NULL, 1 << 1,   0,      0      0       -1 },
-{ "whatsapp-nativefier-d52542",NULL,  NULL, 1 << 1,   0,      0      0       -1 },
+	{ "Gimp",                  NULL,  NULL,    0,     1,      0,     0,      -1  },
+	{ "TelegramDesktop",       NULL,  NULL, 1 << 1,   0,      0,     0,      -1 },
+	{ "discord",               NULL,  NULL, 1 << 1,   0,      0,     0,      -1 },
+{ "whatsapp-nativefier-d52542",NULL,  NULL, 1 << 1,   0,      0,     0,      -1 },
 	{ "konsole",               NULL,  NULL,    0,     0,      1,     0,      -1 },
 	{ "xev",                   NULL,  NULL,    0,     0,      0,     1,      -1 },
 };
