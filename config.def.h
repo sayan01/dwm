@@ -4,6 +4,7 @@
 static const unsigned int borderpx  = 8;        /* border pixel of windows */
 static const unsigned int gappx     = 10;        /* gaps between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
+static const int swallowfloating    = 0;        /* 1 means swallow floating windows by default */
 static const unsigned int systraypinning = 0;   /* 0: sloppy systray follows selected monitor, >0: pin systray to monitor X */
 static const unsigned int systrayspacing = 2;   /* systray spacing */
 static const int systraypinningfailfirst = 1;   /* 1: if pinning fails, display systray on the first monitor, False: display systray on the last monitor*/
@@ -38,12 +39,14 @@ static const Rule rules[] = {
 	 *	WM_CLASS(STRING) = instance, class
 	 *	WM_NAME(STRING) = title
 	 */
-	/* class      instance    title       tags mask     isfloating   monitor */
 	//                               1 << 3 means 1000 which means tag = 4
-	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
-	{ "TelegramDesktop",  NULL,NULL,       1 << 1,       0,           -1 },
-	{ "discord",  NULL,       NULL,       1 << 1,       0,           -1 },
-	{ "whatsapp-nativefier-d52542",NULL,NULL,1 << 1,    0,           -1 },
+	/* class                 instance title  tags   isfloat isterm noswallow monitor*/
+	{ "Gimp",                  NULL,  NULL,    0,     1,      0      0       -1  },
+	{ "TelegramDesktop",       NULL,  NULL, 1 << 1,   0,      0      0       -1 },
+	{ "discord",               NULL,  NULL, 1 << 1,   0,      0      0       -1 },
+{ "whatsapp-nativefier-d52542",NULL,  NULL, 1 << 1,   0,      0      0       -1 },
+	{ "konsole",               NULL,  NULL,    0,     0,      1,     0,      -1 },
+	{ "xev",                   NULL,  NULL,    0,     0,      0,     1,      -1 },
 };
 
 /* layout(s) */
