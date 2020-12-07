@@ -5,7 +5,7 @@ static const unsigned int borderpx  = 8;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const int user_bh            = 36;        /* 0 means that dwm will calculate bar height, >= 1 means dwm will user_bh as bar height */
+static const int user_bh            = 28;        /* 0 means that dwm will calculate bar height, >= 1 means dwm will user_bh as bar height */
 static const char *fonts[]          = { "Bitstream Vera Sans:size=12", 
 										"fontawesome:size=12" };
 static const char dmenufont[]       = "Bitstream Vera Sans:size=12";
