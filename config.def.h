@@ -46,7 +46,7 @@ static const Rule rules[] = {
 	{ "discord",               NULL,  NULL, 1 << 1,   0,      0,     0,      -1 },
 { "whatsapp-nativefier-d52542",NULL,  NULL, 1 << 1,   0,      0,     0,      -1 },
 	{ "konsole",               NULL,  NULL,    0,     0,      1,     0,      -1 },
-	{ "xev",                   NULL,  NULL,    0,     0,      0,     1,      -1 },
+	{ NULL,          NULL,  "Event Tester",    0,     0,      0,     1,      -1 },
 };
 
 /* layout(s) */
