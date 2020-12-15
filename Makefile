@@ -6,7 +6,7 @@ include config.mk
 SRC = drw.c dwm.c util.c
 OBJ = ${SRC:.c=.o}
 
-all: options dwm
+all: dwm
 
 options:
 	@echo dwm build options:
@@ -37,12 +37,15 @@ dist: clean
 	rm -rf dwm-${VERSION}
 
 install: all
+	rm config.h
+	cp config.def.h config.h
 	mkdir -p ${DESTDIR}${PREFIX}/bin
 	cp -f dwm ${DESTDIR}${PREFIX}/bin
 	chmod 755 ${DESTDIR}${PREFIX}/bin/dwm
 	mkdir -p ${DESTDIR}${MANPREFIX}/man1
 	sed "s/VERSION/${VERSION}/g" < dwm.1 > ${DESTDIR}${MANPREFIX}/man1/dwm.1
 	chmod 644 ${DESTDIR}${MANPREFIX}/man1/dwm.1
+	rm -f dwm ${OBJ} dwm-${VERSION}.tar.gz config.h
 
 uninstall:
 	rm -f ${DESTDIR}${PREFIX}/bin/dwm\
