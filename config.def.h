@@ -44,15 +44,21 @@ static const Rule rules[] = {
 	 *	WM_NAME(STRING) = title
 	 */
 	//                               1 << 3 means 1000 which means tag = 4
-	/* class                 instance title  tags   isfloat isterm noswallow monitor*/
-	{ "Gimp",                  NULL,  NULL,    0,     1,      0,     0,      -1  },
-	{ "mpv",                   NULL,  NULL,    0,     1,      0,     0,      -1  },
-	{ "TelegramDesktop",       NULL,  NULL, 1 << 1,   0,      0,     0,      -1 },
-	{ "discord",               NULL,  NULL, 1 << 1,   0,      0,     0,      -1 },
-{"whatsapp-nativefier-d52542", NULL,  NULL, 1 << 1,   0,      0,     0,      -1 },
-	{ "konsole",               NULL,  NULL,    0,     0,      1,     0,      -1 },
-	{ "st",                    NULL,  NULL,    0,     0,      1,     0,      -1 },
-	{ NULL,          NULL,  "Event Tester",    0,     0,      0,     1,      -1 },
+	/* class           instance title  tags isfloat isterm noswallow monitor*/
+	// floating windows
+	{ "Gimp",                      NULL,  NULL,    0,     1,   0,  0,  -1 },
+	{ "mpv",                       NULL,  NULL,    0,     1,   0,  0,  -1 },
+	// fixed desktop
+	{ "TelegramDesktop",           NULL,  NULL, 1 << 1,   0,   0,  0,  -1 },
+	{ "discord",                   NULL,  NULL, 1 << 1,   0,   0,  0,  -1 },
+    { "whatsapp-nativefier-d52542",NULL,  NULL, 1 << 1,   0,   0,  0,  -1 },
+    { "obs",                       NULL,  NULL, 1 << 2,   0,   0,  0,  -1 },
+    { "zoom",                      NULL,  NULL, 1 << 3,   0,   0,  0,  -1 },
+	// isterm 
+	{ "konsole",                   NULL,  NULL,    0,     0,   1,  0,  -1 },
+	{ "st",                        NULL,  NULL,    0,     0,   1,  0,  -1 },
+	// no swallow
+	{ NULL,              NULL,  "Event Tester",    0,     0,   0,  1,  -1 },
 };
 
 /* layout(s) */
