@@ -55,6 +55,9 @@ static const Rule rules[] = {
     { "obs",                       NULL,  NULL, 1 << 2,   0,   0,  0,  -1 },
     { "zoom",                      NULL,  NULL, 1 << 3,   0,   0,  0,  -1 },
     { "Spotify",                   NULL,  NULL, 1 << 2,   0,   0,  0,  -1 },
+    {  NULL,                  "spotify",  NULL, 1 << 2,   0,   0,  0,  -1 },
+    { "spot",                      NULL,  NULL, 1 << 2,   0,   0,  0,  -1 },
+    {  NULL,                     "spot",  NULL, 1 << 2,   0,   0,  0,  -1 },
 	// isterm 
 	{ "konsole",                   NULL,  NULL,    0,     0,   1,  0,  -1 },
 	{ "st",                        NULL,  NULL,    0,     0,   1,  0,  -1 },
