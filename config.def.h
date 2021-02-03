@@ -47,6 +47,7 @@ static const Rule rules[] = {
 	// floating windows
 	{ "Gimp",                      NULL,  NULL,    0,     1,   0,  0,  -1 },
 	{ "mpv",                       NULL,  NULL,    0,     1,   0,  0,  -1 },
+	{ "ksnip",                     NULL,  NULL,    0,     1,   0,  0,  -1 },
 	// fixed desktop
 	{ "TelegramDesktop",           NULL,  NULL, 1 << 1,   0,   0,  0,  -1 },
 	{ "discord",                   NULL,  NULL, 1 << 1,   0,   0,  0,  -1 },
