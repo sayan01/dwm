@@ -35,7 +35,7 @@ static char *colors[][3] = {
        [SchemeSel]  = { selfgcolor,  selbgcolor,  selbordercolor  },
 };
 /* tagging */
-static const char *tags[] = { "", "", "", "", "", "6", "7", "8", "9" };
+static const char *tags[] = { "", "", "", "", "", "6", "7", "8", "" };
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -43,12 +43,15 @@ static const Rule rules[] = {
 	 *	WM_NAME(STRING) = title
 	 */
 	//                               1 << 3 means 1000 which means tag = 4
-	/* class           instance title  tags isfloat isterm noswallow monitor*/
-	// floating windows
+	/* class                 instance  title tags isfloat isterm noswallow monitor*/
+	//							    |      |    |        |     |   |       /
+	// floating windows				|      |    |        |     |   |      /
+	// 								V      V     \v      V     V   V     V
 	{ "Gimp",                      NULL,  NULL,    0,     1,   0,  0,  -1 },
 	{ "mpv",                       NULL,  NULL,    0,     1,   0,  0,  -1 },
 	{ "ksnip",                     NULL,  NULL,    0,     1,   0,  0,  -1 },
 	{ "kdeconnect.daemon",         NULL,  NULL,    0,     1,   0,  0,  -1 },
+
 	// fixed desktop
 	{ "TelegramDesktop",           NULL,  NULL, 1 << 1,   0,   0,  0,  -1 },
 	{ "discord",                   NULL,  NULL, 1 << 1,   0,   0,  0,  -1 },
@@ -59,6 +62,8 @@ static const Rule rules[] = {
     {  NULL,                  "spotify",  NULL, 1 << 2,   0,   0,  0,  -1 },
     { "spot",                      NULL,  NULL, 1 << 2,   0,   0,  0,  -1 },
     {  NULL,                     "spot",  NULL, 1 << 2,   0,   0,  0,  -1 },
+    {  "Thunderbird",              NULL,  NULL, 1 << 8,   0,   0,  0,  -1 },
+
 	// isterm 
 	{ "konsole",                   NULL,  NULL,    0,     0,   1,  0,  -1 },
 	{ "st",                        NULL,  NULL,    0,     0,   1,  0,  -1 },
