@@ -56,6 +56,7 @@ static const Rule rules[] = {
 	{ "TelegramDesktop",           NULL,  NULL, 1 << 1,   0,   0,  0,  -1 },
 	{ "discord",                   NULL,  NULL, 1 << 1,   0,   0,  0,  -1 },
     { "whatsapp-nativefier-d52542",NULL,  NULL, 1 << 1,   0,   0,  0,  -1 },
+    { "whatsapp-nativefier"       ,NULL,  NULL, 1 << 1,   0,   0,  0,  -1 },
     { "obs",                       NULL,  NULL, 1 << 4,   0,   0,  0,  -1 },
     { "zoom",                      NULL,  NULL, 1 << 3,   0,   0,  0,  -1 },
     { "Spotify",                   NULL,  NULL, 1 << 2,   0,   0,  0,  -1 },
