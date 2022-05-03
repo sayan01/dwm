@@ -13,9 +13,9 @@ static int showbar            = 1;     /* 0 means no bar */
 static int topbar             = 1;     /* 0 means bottom bar */
 static int user_bh            = 28;    /* 0 means that dwm will calculate bar height, >= 1 means dwm will user_bh as bar height */
 static const char *fonts[]          = {
-	"Bitstream Vera Sans:size=12",
-	"fontawesome:size=12",
-	"Noto Color Emoji:size=12",
+	"monospace:size=10",
+	"fontawesome:size=10",
+	"Noto Color Emoji:size=10",
 };
 static char dmenufont[]       = "Bitstream Vera Sans:size=12";
 // background color
@@ -57,6 +57,7 @@ static const Rule rules[] = {
 	{ "discord",                   NULL,  NULL, 1 << 1,   0,   0,  0,  -1 },
     { "whatsapp-nativefier-d52542",NULL,  NULL, 1 << 1,   0,   0,  0,  -1 },
     { "whatsapp-nativefier"       ,NULL,  NULL, 1 << 1,   0,   0,  0,  -1 },
+    { "Whatsapp-for-linux"       ,NULL,  NULL, 1 << 1,   0,   0,  0,  -1 },
     { "obs",                       NULL,  NULL, 1 << 4,   0,   0,  0,  -1 },
     { "zoom",                      NULL,  NULL, 1 << 3,   0,   0,  0,  -1 },
     { "Spotify",                   NULL,  NULL, 1 << 2,   0,   0,  0,  -1 },
