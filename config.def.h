@@ -35,7 +35,7 @@ static char *colors[][3] = {
        [SchemeSel]  = { selfgcolor,  selbgcolor,  selbordercolor  },
 };
 /* tagging */
-static const char *tags[] = { "", "", "", "", "", "6", "7", "8", "" };
+static char tags[][15] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -56,8 +56,11 @@ static const Rule rules[] = {
 	{ "TelegramDesktop",           NULL,  NULL, 1 << 1,   0,   0,  0,  -1 },
 	{ "discord",                   NULL,  NULL, 1 << 1,   0,   0,  0,  -1 },
     { "whatsapp-nativefier-d52542",NULL,  NULL, 1 << 1,   0,   0,  0,  -1 },
+    { "whatsapp-nativefier-d40211",NULL,  NULL, 1 << 1,   0,   0,  0,  -1 },
     { "whatsapp-nativefier"       ,NULL,  NULL, 1 << 1,   0,   0,  0,  -1 },
     { "Whatsapp-for-linux"       ,NULL,  NULL, 1 << 1,   0,   0,  0,  -1 },
+    { "walc"       ,NULL,  NULL, 1 << 1,   0,   0,  0,  -1 },
+    { NULL,					NULL,  "WhatsApp", 1 << 1,   0,   0,  0,  -1 },
     { "obs",                       NULL,  NULL, 1 << 4,   0,   0,  0,  -1 },
     { "zoom",                      NULL,  NULL, 1 << 3,   0,   0,  0,  -1 },
     { "Spotify",                   NULL,  NULL, 1 << 2,   0,   0,  0,  -1 },
@@ -80,9 +83,9 @@ static int resizehints = 0;// 1 = respect size hints in tiled resizals
 
 static const Layout layouts[] = {
 	/* symbol     arrange function */
-	{ "T",           tile },  /* first entry is default */
-	{ "F",           NULL },  /* no layout function means floating behavior */
-	{ "M",           monocle },
+	{ "tile",           tile },  /* first entry is default */
+	{ "float",           NULL },  /* no layout function means floating behavior */
+	{ "monocle",           monocle },
 };
 
 /* key definitions */
@@ -99,7 +102,7 @@ static const Layout layouts[] = {
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", normbgcolor, "-nf", normfgcolor, "-sb", selbordercolor, "-sf", selfgcolor, NULL };
-static const char *termcmd[]  = { "konsole", NULL };
+static const char *termcmd[]  = { "terminator", NULL };
 static const char scratchpadname[] = "scratchpad";
 static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "120x34", NULL };
 
@@ -127,6 +130,15 @@ ResourcePref resources[] = {
 { "systraypinningfailfirst",INTEGER, &systraypinningfailfirst },
 	{ "showsystray",		INTEGER, &showsystray },
 	{ "user_bh",			INTEGER, &user_bh },
+	{ "tag1",			STRING, &tags[0] },
+	{ "tag2",			STRING, &tags[1] },
+	{ "tag3",			STRING, &tags[2] },
+	{ "tag4",			STRING, &tags[3] },
+	{ "tag5",			STRING, &tags[4] },
+	{ "tag6",			STRING, &tags[5] },
+	{ "tag7",			STRING, &tags[6] },
+	{ "tag8",			STRING, &tags[7] },
+	{ "tag9",			STRING, &tags[8] },
 };
 
 
