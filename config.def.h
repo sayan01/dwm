@@ -12,6 +12,12 @@ static int showsystray        = 1;     /* 0 means no systray */
 static int showbar            = 1;     /* 0 means no bar */
 static int topbar             = 1;     /* 0 means bottom bar */
 static int user_bh            = 28;    /* 0 means that dwm will calculate bar height, >= 1 means dwm will user_bh as bar height */
+static const double activeopacity   = 1.0f;     /* Window opacity when it's focused (0 <= opacity <= 1) */
+static const double inactiveopacity = 0.875f;   /* Window opacity when it's inactive (0 <= opacity <= 1) */
+static       Bool bUseOpacity       = True;     /* Starts with opacity on any unfocused windows */
+
+
+
 static const char *fonts[]          = {
 	"monospace:size=10",
 	"fontawesome:size=10",
@@ -139,9 +145,9 @@ ResourcePref resources[] = {
 	{ "tag7",			STRING, &tags[6] },
 	{ "tag8",			STRING, &tags[7] },
 	{ "tag9",			STRING, &tags[8] },
-};
-
-
+	{ "activeopacity",			STRING, &activeopacity },
+	{ "inactiveopacity",			STRING, &inactiveopacity },
+	{ "bUseOpacity",			STRING, &bUseOpacity },
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -149,6 +155,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_F1,     togglescratch,  {.v = scratchpadcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
+	{ MODKEY,                       XK_a,      toggleopacity,  {0} },
 	{ Mod1Mask,                     XK_Tab,    swapfocus,  	   {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
