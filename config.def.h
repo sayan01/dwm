@@ -20,7 +20,7 @@ static       Bool bUseOpacity       = True;     /* Starts with opacity on any un
 
 
 static const char *fonts[]          = {
-	"monospace:size=10",
+	"SF Mono:size=10",
 	"fontawesome:size=10",
 	"Noto Color Emoji:size=10",
 };
