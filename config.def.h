@@ -50,14 +50,15 @@ static const Rule rules[] = {
 	 *	WM_NAME(STRING) = title
 	 */
 	//                               1 << 3 means 1000 which means tag = 4
-	/* class                 instance  title tags isfloat isterm noswallow monitor*/
-	//							    |      |    |        |     |   |       /
-	// floating windows				|      |    |        |     |   |      /
-	// 								V      V     \v      V     V   V     V
+	/* class                      instance  title tags isfloat isterm noswallow monitor*/
+	//							    |            |     |        |     |    |    /           /
+	// floating windows				      |      |       |      |    |   |      /----|
+	// 								V            V       \v      V     V     V   V     V
 	{ "Gimp",                      NULL,  NULL,    0,     1,   0,  0,  -1 },
 	{ "mpv",                       NULL,  NULL,    0,     1,   0,  0,  -1 },
 	{ "ksnip",                     NULL,  NULL,    0,     1,   0,  0,  -1 },
 	{ "kdeconnect.daemon",         NULL,  NULL,    0,     1,   0,  0,  -1 },
+	{ "gnome-calculator",         NULL,  NULL,    0,     1,   0,  0,  -1 },
 
 	// fixed desktop
 	{ "TelegramDesktop",           NULL,  NULL, 1 << 1,   0,   0,  0,  -1 },
@@ -68,12 +69,16 @@ static const Rule rules[] = {
     { "Whatsapp-for-linux"       ,NULL,  NULL, 1 << 1,   0,   0,  0,  -1 },
     { "walc"       ,NULL,  NULL, 1 << 1,   0,   0,  0,  -1 },
     { NULL,					NULL,  "WhatsApp", 1 << 1,   0,   0,  0,  -1 },
+
     { "obs",                       NULL,  NULL, 1 << 4,   0,   0,  0,  -1 },
+
     { "zoom",                      NULL,  NULL, 1 << 3,   0,   0,  0,  -1 },
+
     { "Spotify",                   NULL,  NULL, 1 << 2,   0,   0,  0,  -1 },
     {  NULL,                  "spotify",  NULL, 1 << 2,   0,   0,  0,  -1 },
     { "spot",                      NULL,  NULL, 1 << 2,   0,   0,  0,  -1 },
     {  NULL,                     "spot",  NULL, 1 << 2,   0,   0,  0,  -1 },
+
     {  "Thunderbird",              NULL,  NULL, 1 << 8,   0,   0,  0,  -1 },
 
 	// isterm 
