@@ -79,7 +79,7 @@ static const Rule rules[] = {
     { "spot",                      NULL,  NULL, 1 << 2,   0,   0,  0,  -1 },
     {  NULL,                     "spot",  NULL, 1 << 2,   0,   0,  0,  -1 },
 
-    {  "Thunderbird",              NULL,  NULL, 1 << 8,   0,   0,  0,  -1 },
+    {  "thunderbird",              NULL,  NULL, 1 << 8,   0,   0,  0,  -1 },
 
 	// isterm 
 	{ "konsole",                   NULL,  NULL,    0,     0,   1,  0,  -1 },
