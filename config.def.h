@@ -26,7 +26,13 @@ static float inactiveopacity =
 static Bool bUseOpacity =
     True; /* Starts with opacity on any unfocused windows */
 
-static const char *fonts[] = {
+static char fonts2[][100] = {
+    "SF Mono:size=12",
+    "fontawesome:size=12",
+    "Noto Color Emoji:size=12",
+};
+
+static char *fonts[] = {
     "SF Mono:size=12",
     "fontawesome:size=12",
     "Noto Color Emoji:size=12",
@@ -56,18 +62,9 @@ static const Rule rules[] = {
      *	WM_CLASS(STRING) = instance, class
      *	WM_NAME(STRING) = title
      */
-    //                               1 << 3 means 1000 which means tag = 4
-    /* class                      instance  title tags isfloat isterm noswallow
-       monitor*/
-    //							    |            |     |        |     |
-    //|
-    ///
-    ///
-    // floating windows				      |      |       |      | |
-    // |
-    // /----| 								V            V       \v      V     V     V
-    // V
-    // V
+    //                         1 << 3 means 1000 which means tag = 4
+    /* class instance title tags isfloat isterm noswallow monitor*/
+    // floating windows
     {"Gimp", NULL, NULL, 0, 1, 0, 0, -1},
     {"mpv", NULL, NULL, 0, 1, 0, 0, -1},
     {"ksnip", NULL, NULL, 0, 1, 0, 0, -1},
@@ -77,6 +74,7 @@ static const Rule rules[] = {
 
     // fixed desktop
     {"TelegramDesktop", NULL, NULL, 1 << 1, 0, 0, 0, -1},
+    {"Signal", NULL, NULL, 1 << 1, 0, 0, 0, -1},
     {"discord", NULL, NULL, 1 << 1, 0, 0, 0, -1},
     {"whatsapp-nativefier-d52542", NULL, NULL, 1 << 1, 0, 0, 0, -1},
     {"whatsapp-nativefier-d40211", NULL, NULL, 1 << 1, 0, 0, 0, -1},
@@ -138,7 +136,7 @@ static const char *dmenucmd[] = {"dmenu_run", "-m",  dmenumon,       "-fn",
                                  dmenufont,   "-nb", normbgcolor,    "-nf",
                                  normfgcolor, "-sb", selbordercolor, "-sf",
                                  selfgcolor,  NULL};
-static const char *termcmd[] = {"terminator", NULL};
+static const char *termcmd[] = {"konsole", NULL};
 static const char scratchpadname[] = "scratchpad";
 static const char *scratchpadcmd[] = {"st", "-t",     scratchpadname,
                                       "-g", "120x34", NULL};
@@ -176,6 +174,9 @@ ResourcePref resources[] = {
     {"tag7", STRING, &tags[6]},
     {"tag8", STRING, &tags[7]},
     {"tag9", STRING, &tags[8]},
+    {"font1", STRING, &fonts2[0]},
+    {"font2", STRING, &fonts2[1]},
+    {"font3", STRING, &fonts2[2]},
     {"activeopacity", FLOAT, &activeopacity},
     {"inactiveopacity", FLOAT, &inactiveopacity},
 };
