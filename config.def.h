@@ -91,6 +91,7 @@ static const Rule rules[] = {
     {NULL, "spotify", NULL, 1 << 2, 0, 0, 0, -1},
     {"spot", NULL, NULL, 1 << 2, 0, 0, 0, -1},
     {NULL, "spot", NULL, 1 << 2, 0, 0, 0, -1},
+    {NULL, NULL, "spt", 1 << 2, 0, 0, 0, -1},
 
     {"ksnip", NULL, NULL, 1 << 7, 0, 0, 0, -1},
 
