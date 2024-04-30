@@ -68,6 +68,7 @@ static const Rule rules[] = {
     {"Gimp", NULL, NULL, 0, 1, 0, 0, -1},
     {"mpv", NULL, NULL, 0, 1, 0, 0, -1},
     {"ksnip", NULL, NULL, 0, 1, 0, 0, -1},
+    {"krunner", NULL, NULL, 0, 1, 0, 0, -1},
     {"kdeconnect.daemon", NULL, NULL, 0, 1, 0, 0, -1},
     {"gnome-calculator", NULL, NULL, 0, 1, 0, 0, -1},
     {NULL, NULL, "Live Caption", 0, 1, 0, 0, -1},
