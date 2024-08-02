@@ -72,7 +72,7 @@ static const Rule rules[] = {
     {"kdeconnect.daemon", NULL, NULL, 0, 1, 0, 0, -1},
     {"gnome-calculator", NULL, NULL, 0, 1, 0, 0, -1},
     {NULL, NULL, "Live Caption", 0, 1, 0, 0, -1},
-
+    {NULL, NULL, NULL, 0, 1, 0, 0, -1, .role = "pop-up" },
     // fixed desktop
     {"TelegramDesktop", NULL, NULL, 1 << 1, 0, 0, 0, -1},
     {"Signal", NULL, NULL, 1 << 1, 0, 0, 0, -1},
